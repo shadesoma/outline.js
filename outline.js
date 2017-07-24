@@ -28,8 +28,10 @@
 		set_css('*{outline:0!important;}::-moz-focus-inner{border:0;}');
 	});
 
-	add_event_listener('keydown', function(){
-		set_css('');
-	});
+    add_event_listener('keydown', function(){
+        if (event.keyCode !== 27) { /* Esc */
+            set_css('');
+        }
+    });
 
 })(document);
